@@ -17,7 +17,7 @@ def lambda_handler(event, contest):
     response = s3Client.get_object(Bucket=bucket, Key=key)
 
     #Process and print the data
-    data = response['Body'].read.decod('utf-8')
+    data = response['Body'].read.decode('utf-8')
     reader = csv.reader(io.StringIO(data))
     next(reader)
     for row in data:
