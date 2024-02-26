@@ -4,8 +4,8 @@ import os
 
 def s3Client():
     # Configure AWS credentials
-    aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID','AKIAQQ2ZKLT4SVQ3GBHF')
-    aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY','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')
+    aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
+    aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
     
     # Set up S3 client
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
